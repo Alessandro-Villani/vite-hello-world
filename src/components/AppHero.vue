@@ -54,20 +54,17 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <div class="row">
-            <div class="slider col-6 m-auto d-flex justify-content-center mb-3" @click="toggleDescription()">
-                <img class="img-fluid" :src="getImageUrl(this.images[this.currentIndex].url)"
-                    :alt="this.images[this.currentIndex].name">
-                <h3>{{ this.images[this.currentIndex].name }}</h3>
-            </div>
+    <div class="row">
+        <div class="slider col-6 m-auto d-flex justify-content-center mb-3 px-0" @click="toggleDescription()">
+            <img class="img-fluid" :src="getImageUrl(this.images[this.currentIndex].url)"
+                :alt="this.images[this.currentIndex].name">
+            <h3>{{ this.images[this.currentIndex].name }}</h3>
         </div>
-        <div class="row">
-            <div class="col-6 m-auto">
-                <AppHeroDescription v-if="descriptionShow" :url="getImageUrl(this.images[this.currentIndex].url2)"
-                    :name="this.images[this.currentIndex].name"
-                    :description="this.images[this.currentIndex].description" />
-            </div>
+    </div>
+    <div class="row">
+        <div class="col-6 m-auto">
+            <AppHeroDescription v-if="descriptionShow" :url="getImageUrl(this.images[this.currentIndex].url2)"
+                :name="this.images[this.currentIndex].name" :description="this.images[this.currentIndex].description" />
         </div>
     </div>
 </template>
@@ -77,6 +74,7 @@ export default {
     position: relative;
     cursor: pointer;
     transition: all 0.5s;
+    box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .slider:hover {

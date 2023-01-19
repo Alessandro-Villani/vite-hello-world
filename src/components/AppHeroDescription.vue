@@ -17,7 +17,12 @@ export default {
 </template>
 
 <style scoped>
+.description {
+    color: white;
+}
+
 img {
     width: 300px;
+    box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.5);
 }
 </style>

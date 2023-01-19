@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-    <header class="container mb-5 d-flex align-items-center justify-content-center">
+    <header class="container d-flex align-items-center justify-content-center">
         <h1>{{ message }}</h1>
     </header>
 </template>
